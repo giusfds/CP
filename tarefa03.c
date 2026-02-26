@@ -19,14 +19,14 @@ int sieveOfEratosthenes(int n)
    int sqrt_n = sqrt(n);
 
    memset(prime, true,(n+1)*sizeof(bool));
-
+	 
    for (int p=2; p <= sqrt_n; p++)
    {
        // If prime[p] is not changed, then it is a prime
        if (prime[p] == true)
        {
            // Update all multiples of p
-           #pragma omp for ordered
+           #pragma parallel omp for ordered
            for (int i=p*2; i<=n; i += p)
            prime[i] = false;
         }
