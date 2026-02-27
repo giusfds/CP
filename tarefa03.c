@@ -48,4 +48,4 @@ int main()
 } 
 
 // Sequencial  0.73s user 0.03s system 98% cpu 0.768 total
-// Paralelo    2.35s user 0.03s system 85% cpu 2.796 total  (nao sei pq deu mais tempo :( )
+// Paralelo    0.54s user 0.02s system 63% cpu 0.875 total
